@@ -1,0 +1,46 @@
+<div class="row hospital-dashboard-box">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Hospital Name</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <div class="container mt-5">
+                        <table id="example" class="table table-striped table-bordered">
+                            <thead>
+                                <tr class="sorted-hed">
+                                    <th (click)="sortTable('position')">
+                                        <span>No</span> 
+                                        <span>{{ sortAscending ? '▲' : '▼' }}</span>
+                                    </th>
+                                    <th (click)="sortTable('name')">
+                                        <span>Name</span> 
+                                        <span>{{ sortAscending ? '▲' : '▼' }}</span>
+                                    </th>
+                                    <th (click)="sortTable('weight')">
+                                        <span>Weight</span> 
+                                        <span>{{ sortAscending ? '▲' : '▼'}}</span></th>
+                                    <th (click)="sortTable('symbol')">
+                                        <span>Symbol</span> 
+                                        <span>{{ sortAscending ? '▲' : '▼'}}</span></th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of items;">
+                                    <td>{{item.position}}</td>
+                                    <td>{{item.name}}</td>
+                                    <td>{{item.weight}}</td>
+                                    <td>{{item.symbol}}</td>
+                                </tr>
+                                <!-- Add more rows as needed -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

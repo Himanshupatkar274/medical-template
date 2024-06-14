@@ -1,0 +1,135 @@
+<div class="sidebarMenu" [ngClass]="!status ? 'darSideBar' : 'genisSideBar'" (mouseenter)="mouseEnter()">
+
+	<div class="sideBarUst text-center pt-3 d-flex justify-content-center">
+		<div class="userInfo d-flex">
+			<div class="userFoto mb-2" [ngClass]="!status ? 'userFotoDar' : 'userFotoGenis'">
+				<img class="userPhoto" src="https://cdn.pixabay.com/photo/2018/08/28/12/41/avatar-3637425_640.png"
+					alt="">
+			</div>
+			<div class="userName" [ngClass]="!statusLink ? 'userNameDar' : 'userNameGenis'">
+				<span class="d-flex justify-content-center animated fadeInDown">Himanshu Patkar</span>
+				<small class="d-flex justify-content-center animated fadeInDown">Angular Developer</small>
+			</div>
+		</div>
+		<hr>
+
+	</div>
+
+	<div class="sideBarOrta sidebarScrol">
+		<ul class="nav flex-column mt-2">
+			<li class="nav-item" routerLink="" [routerLinkActive]="['active-page']"
+				[routerLinkActiveOptions]="{ exact: true }">
+				<a class="nav-link">
+					<span class="navIcon">İS</span>
+					<span [ngClass]="!statusLink ? 'navLinkDar' : 'navLinkGenis animated fadeInRight'">Hospital
+						Dashboard</span>
+				</a>
+			</li>
+
+			<li class="nav-item" routerLink="/medical-dashboard" [routerLinkActive]="['active-page']">
+				<a class="nav-link">
+					<span class="navIcon">SA</span>
+					<span [ngClass]="!statusLink ? 'navLinkDar' : 'navLinkGenis animated fadeInRight'">Medical
+						Dashboard</span>
+				</a>
+			</li>
+
+			<li class="nav-item sidebar-accordian">
+				<section class="nav-link d-flex">
+					<div class="navIcon m-0">SA</div>
+					<div [ngClass]="statusLink ? 'w-100' : ''" class="accordion accordion-flush"
+						id="accordionFlushExample">
+						<div
+							[ngClass]="!statusLink ? 'accordion-item navLinkDar w-100' : 'accordion-item navLinkGenis animated fadeInRight w-100'">
+							<h2 class="accordion-header">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#flush-collapseOne" aria-expanded="false"
+									aria-controls="flush-collapseOne">
+									Accounts
+								</button>
+							</h2>
+							<div id="flush-collapseOne" class="accordion-collapse collapse"
+								data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body p-2">
+									<ul class="nav flex-column">
+										<li class="nav-item" routerLink="">
+											<a class="nav-link">
+												Income 
+											</a>
+										</li>
+										<li class="nav-item" routerLink="">
+											<a class="nav-link">
+												Payments 
+											</a>
+										</li>
+										<li class="nav-item" routerLink="">
+											<a class="nav-link">
+												Invice 
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</li>
+
+			<li class="nav-item sidebar-accordian">
+				<section class="nav-link d-flex">
+					<div class="navIcon m-0">SA</div>
+					<div [ngClass]="statusLink ? 'w-100' : ''" class="accordion accordion-flush"
+						id="Health">
+						<div
+							[ngClass]="!statusLink ? 'accordion-item navLinkDar w-100' : 'accordion-item navLinkGenis animated fadeInRight w-100'">
+							<h2 class="accordion-header">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#HealthCheck" aria-expanded="false"
+									aria-controls="HealthCheck">
+									Health Check
+								</button>
+							</h2>
+							<div id="HealthCheck" class="accordion-collapse collapse"
+								data-bs-parent="#Health">
+								<div class="accordion-body p-2">
+									<ul class="nav flex-column">
+										<li class="nav-item" routerLink="">
+											<a class="nav-link">
+												Income 
+											</a>
+										</li>
+										<li class="nav-item" routerLink="">
+											<a class="nav-link">
+												Payments 
+											</a>
+										</li>
+										<li class="nav-item" routerLink="">
+											<a class="nav-link">
+												Invice 
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</li>
+
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+					<span class="navIcon">AL</span>
+					<span [ngClass]="!statusLink ? 'navLinkDar' : 'navLinkGenis animated fadeInRight'">Nacle123
+						Dashboard</span>
+				</a>
+			</li>
+
+		</ul>
+	</div>
+
+	<div *ngIf="status" class="sidebar-contact">
+		<p class="fw-light mb-1 text-nowrap text-truncate">Emergency Contact</p>
+		<h5 class="m-0 lh-1 text-nowrap text-truncate">0987654321</h5>
+		<i class="ri-phone-line"></i>
+	  </div>
+</div>

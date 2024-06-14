@@ -1,1 +1,112 @@
 /* You can add global styles to this file, and also import other style files */
+*::-webkit-scrollbar {
+  width: .5rem;
+  height: .5rem
+}
+
+*::-webkit-scrollbar-track {
+  background: #cdd6dc
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #f0f1f4;
+  border: 3px solid #b9c3ca
+}
+
+.sorted-hed span:nth-child(2){
+  cursor: pointer;
+  padding-left: 196px;
+  color: #acacac;
+}
+.top-navbar-hed {
+  .navbar-nav {
+    margin-right: auto !important;
+  }
+
+  .navbar-brand span {
+    box-shadow: inset 1.5px 1.5px 0px rgba(255,255,255,.25),inset -1.5px -1.5px 0px rgba(0,0,0,.1);
+  }
+}
+
+.navbar-brand {
+  cursor: pointer;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.main-body {
+  padding: 1.5rem 1.5rem 1.25rem 1.5rem;
+  min-height: calc(100vh - 155px);
+}
+
+.parent-box {
+  width: 100%;
+  margin-top: 3rem;
+}
+.main-container {
+  padding: 0 0 0 250px;
+}
+.breadcrum-box {
+  background: #f6f9fb;
+  position: sticky;
+  top: 50px;
+  z-index: 99;
+  box-shadow: 0 2px 5px rgba(40, 90, 185, 0.1);
+}
+
+.sidebar-accordian {
+  .accordion-button {
+    padding: 0px 20px 0px 11px;
+    background-color: unset !important;
+  }
+
+  .accordion-button:focus {
+    outline: unset !important;
+    box-shadow: none;
+  }
+  .accordion-item {
+    background-color: unset !important;
+  }
+
+  .accordion-button:not(.collapsed) {
+    box-shadow: unset !important;
+  }
+}
+
+
+.hospital-dashboard-box .card{
+  box-shadow: 0px 2px 6px rgba(40,90,185,.1);
+  border: 0 !important;
+
+  .card-title {
+    margin-bottom: 0.5rem;
+    color: #272727;
+  }
+}
+
+.app-header {
+  padding: 0 1.25rem;
+  min-height: 50px;
+  background: #116aef !important;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  color: #ffffff !important;
+}
+
+
+.main-container-toggled {
+  padding-left: 74px !important;
+}
+
+.sidebar-contact {
+  padding: 10px 15px 10px 50px;
+  background: #0ebb13;
+  color: #fff;
+  margin: 18px 20px 8px 20px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  position: relative;
+}
